@@ -9,6 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   setupDependencyInjection();
   await LocalStorage.instance.initHive();
   await LocalStorage.instance.registerAdapters();
